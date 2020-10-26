@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Sistema de Venda de Livros</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.12/jquery.mask.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <p class="name">TJEHU</p>
+        </div>
+        <div class="content">
+            <div class="row col-12" id="forms">
+                <!--FORMULÁRIO ABERTO-->
+                <div class="col-5" id="login">
+                    <form action="" method="post" id="formAberto">
+                        <h1>Formulário Aberto</h1>
+                        <p>
+                            <label for="nome_login">Nome</label>
+                            <span class="error">*</span>
+                            <input id="nome_login" name="nome_login" type="text" />
+                        </p>
+                        <p>
+                            <label for="email_login">E-mail</label>
+                            <span class="error">*</span>
+                            <input id="email_login" name="email_login" type="email"
+                                placeholder="contato@hotmail.com" />
+                        </p>
+                        <p>
+                            <label for="cpf_login">CPF</label>
+                            <span class="error">*</span>
+                            <input id="cpf_login" name="cpf_login" type="text" />
+                        </p>
+                        <p>
+                            <label for="tel_login">DDD + Telefone</label>
+                            <span class="error">*</span>
+                            <input id="tel_login" name="tel_login" type="text" />
+                        </p>
+                        <p>
+                            <input type="submit" value="Cadastrar" />
+                        </p>
+                    </form>
+                    <p>
+                        <button type="submit" onclick="acessoAberto()">Acessar</button>
+                    </p>
+                </div>
+
+                <!--FORMULÁRIO RESTRITO-->
+                <div class="col-5" style="margin-left: 180px;" id="cadastro">
+                    <form method="post" action="" id="formRestrito">
+                        <h1>Formulário Restrito</h1>
+                        <p>
+                            <label for="nome_cad">Nome</label>
+                            <span class="error">*</span>
+                            <input id="nome_cad" name="nome_cad" type="text" />
+                        </p>
+                        <p>
+                            <label for="email_cad">E-mail</label>
+                            <span class="error">*</span>
+                            <input id="email_cad" name="email_cad" type="email"
+                                placeholder="contato@hotmail.com" />
+                        </p>
+                        <p>
+                            <label for="cpf_cad">CPF</label>
+                            <span class="error">*</span>
+                            <input id="cpf_cad" name="cpf_cad" type="text" />
+                        </p>
+                        <p>
+                            <label for="senha_cad">Senha</label>
+                            <span class="error">*</span>
+                            <input id="senha_cad" name="senha_cad" type="password" />
+                        </p>
+                        <p>
+                            <input type="submit" value="Cadastrar" />
+                        </p>
+                    </form>
+                    <p>
+                        <button type="submit" onclick="acessoRestrito()">Acessar</button>
+                    </p>
+                </div>
+            </div>
+            <div class="col-12" id="areaAberta" hidden>
+                <h1>Cadastro</h1>
+                <table id="tableAberta" border="2">
+                    <tr>
+                        <td class="text-bold">Nome</td>
+                        <td class="text-bold">E-mail</td>
+                        <td class="text-bold">CPF</td>
+                        <td class="text-bold">Telefone</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-12" id="areaRestrita" hidden>
+                <h1>Lista de Usuários - Formulário Restrito</h1>
+                <div class="info">* Para alterar o valor de um registro, basta clicar na célula que deseja alterar.</div>
+                <br>
+                <table id="tableRestrita" border="2">
+                    <tr>
+                        <td class="text-bold">Nome</td>
+                        <td class="text-bold">E-mail</td>
+                        <td class="text-bold">CPF</td>
+                        <td class="text-bold">Senha</td>
+                    </tr>
+                </table>
+                <h1 style="margin-top: 120px;">Lista de Usuários - Formulário Aberto</h1>
+                <div class="info">* Para alterar o valor de um registro, basta clicar na célula que deseja alterar.</div>
+                <br>
+                <table id="tableRestrita_a" border="2" style="margin-bottom: 200px;">
+                    <tr>
+                        <td class="text-bold">Nome</td>
+                        <td class="text-bold">E-mail</td>
+                        <td class="text-bold">CPF</td>
+                        <td class="text-bold">Telefone</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/scripts.js"></script>
+</html>
